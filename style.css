@@ -1,0 +1,385 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100vw;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12vw;
+    padding-right: 10vw;
+    height: 11vh; 
+    background: black;
+}
+#nav #tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5.5vh;
+    font-family: gilroy;
+    padding: 2vh;
+}
+#nav img{
+    
+    height: 9vh;
+}
+#nav h1{
+    display: flex;
+    font-size: 2.3vh;
+    font-family: gilroy;
+    color: rgba(212, 206, 206, 0.89);
+    font-weight: 550;
+}
+#nav h1:hover{
+    color: white;
+    cursor: pointer;
+}
+#page1{
+    margin-top: 3vw;
+    display: flex;
+    height: 90vh;
+    width: 110vw;
+    background-position: center;
+    width: 100%;
+    background-size: 100%;
+    font-family: gilroy;
+    color: white;
+    background-image: url(https://wyreflow.com/assets/images/wyreflow.homepage.png);
+}
+#page1left{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding: 2vw;
+    width: 50vw;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.567));
+}
+
+#page1right{
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    justify-content: center;
+    height: 90vh;
+    width: 50vw;
+    background: linear-gradient(to right,  rgba(0, 0, 0, 0.567), transparent);
+}
+#page1right h1{
+    font-size: 3vh;
+    padding-right: 15vw;
+    font-weight: 550;
+    line-height: 2vw;
+    letter-spacing: .2vh;
+    color: rgba(245, 245, 245, 0.877);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: auto;
+    }
+
+    #nav img {
+        height: 7vh;
+    }
+
+    #nav #tag {
+        flex-wrap: wrap;
+        gap: 2vh;
+        padding: 1vh;
+    }
+
+    #nav h1 {
+        font-size: 2vh;
+    }
+
+    #page1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #page1left, #page1right {
+        width: 100%;
+        height: auto;
+    }
+
+    #page1right h1 {
+        font-size: 2.5vh;
+        padding-right: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    #nav {
+        align-items: flex-start;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    #nav img {
+        height: 6vh;
+    }
+
+    #nav h1 {
+        font-size: 1.8vh;
+    }
+
+    #page1right h1 {
+        font-size: 2vh;
+        padding-right: 3vw;
+    }
+
+    #page1 {
+        background-size: cover;
+    }
+}
+#page2{
+    display: flex;
+    height: 90vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.322);
+}
+#page2left{
+    color: white;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+#page2left video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: center;
+}
+#page2left #overlay{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+position: absolute;
+height: 100%;
+top: 0;
+background-color: #0000006c;
+}
+#page2left #overlay h1{
+    font-size: 3vw;
+    width: 60%;
+    text-align: center;
+}
+#page2left #overlay h2{
+    font-size: 2vw;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+}
+#page2left #overlay h1:hover{
+    opacity: 1;
+}
+#overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2vw;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    width: 100%;
+    color: white;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#page2left h1{
+    margin: 0;
+    font-family: gilroy;
+}
+
+#page2left h1 {
+    font-size: 3vh;
+    color: rgba(245, 245, 245, 0.877);
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+
+#page2left:hover h1 {
+    opacity: 1;  /* Make h1 fully visible on hover */
+    transform: translateY(-5vw);
+}
+
+#page2right{
+    color: white;
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+#page2right video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-fit: center;
+}
+#page2right #overlay{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+position: absolute;
+height: 100%;
+top: 0;
+background-color: #0000006c;
+}
+#page2right #overlay h1{
+    font-size: 3vw;
+    width: 60%;
+    text-align: center;
+}
+#page2right #overlay h2{
+    font-size: 2vw;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+}
+#page2right #overlay h1:hover{
+    opacity: 1;
+}
+#overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2vw;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    width: 100%;
+    color: white;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#page2right h1{
+    margin: 0;
+    font-family: gilroy;
+}
+
+#page2right h1 {
+    font-size: 3vh;
+    color: rgba(245, 245, 245, 0.877);
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+
+
+
+#page2right:hover h1 {
+    opacity: 1;  /* Make h1 fully visible on hover */
+    transform: translateY(-5vw);
+}
+#page3 {
+    gap: 1vw;
+    display: flex;
+    padding-left: 15vw;
+    /* align-items: center; */
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    height: 75vh;
+    width: 100%;
+    background-image: url("https://wyreflow.com/assets/images/homepage-image-03.png");
+    background-position: center; /* Ensure the image is centered */
+    background-size: cover; /* Make sure the background image covers the entire container */
+}
+#page3 h1{
+    font-size: 1.5vw;
+    letter-spacing: .5vh;
+
+}
+#page3 h2{
+    font-size: .7vw;
+    letter-spacing: .5vh;
+    width: 50%;
+
+}
+#page4{
+    /* height: 150vh; */
+    width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 12vh;
+
+}
+#page4 h1{
+    font-size: 7vh;
+}
+#page4 h2{
+    padding-top: 2vh;
+    font-size: 5vh;
+    color: whitesmoke;
+    font-weight: 550;
+}
+#page4image{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 100px;
+    width: 100%;
+    margin-top: 5vh;
+    /* background-color: red; */
+    height: 55vh;
+    padding: 10px;
+}
+#page4image .img{
+    overflow: hidden;
+height: 100%;
+width: 25vw;
+background-color: orange;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
+border-radius: 20px;
+
+}
+#page4image .img img{
+ position: relative;
+    height: 105%;
+    transition: all ease 0.5s;
+    width: 100%;
+    left: 0%;
+}
+#page4image .img img:hover{
+    scale: 1.1;
+}
+#page5 {
+    height: 55vh;
+    width: 100vw;
+    background-color: red;
+    background-image: url("https://wyreflow.com/assets/images/explore-the-tech.png");
+    background-position: center; /* Centers the image */
+    background-size: cover; /* Ensures the image covers the container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+
